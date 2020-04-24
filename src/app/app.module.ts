@@ -8,9 +8,10 @@ import { ListComponent } from './list/list.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
-	declarations: [AppComponent, HomeComponent, ListComponent],
+	declarations: [AppComponent, HomeComponent, ListComponent, GameComponent],
 	imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 	providers: [],
 	bootstrap: [AppComponent],
