@@ -6,8 +6,26 @@
 
 <div class="play-container">
 	<p>
-		<input type="text" [{ngMode}]="name">
+		<input type="text" [(ngModel)]="name">
 		<br>
 		<strong>You said: </strong> {{ name }}
 	</p>
+</div>
+
+<!-- [style.background-color]="clickCounter > 4 ? 'yellow' : 'lightgray'" -->
+<!-- [ngStyle]="{
+	'background-color': clickCounter > 4 ? 'yellow' : 'lightgray',
+	'border':			clickCounter > 4 ? '4px solid black' : none
+}" -->
+<!-- [class.active]="clickCounter > 4" -->
+<div class="play-container" [ngClass]="setClasses()">
+
+	<ng-template [ngIf]='clickCounter > 4' [ngIfElse]='none'>
+		<p>The Click Counter <strong>IS GREATER</strong> than 4.</p>
+	</ng-template>
+
+	<ng-template #none>
+		<p>The Click Counter <strong>less</strong> than 4.</p>
+	</ng-template>
+
 </div>
